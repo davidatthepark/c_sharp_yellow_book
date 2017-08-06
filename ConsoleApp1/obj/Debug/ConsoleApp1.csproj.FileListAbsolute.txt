@@ -4,3 +4,9 @@ C:\Users\v-pardav\repos\books\c_sharp_yellow_book\ConsoleApp1\bin\Debug\ConsoleA
 C:\Users\v-pardav\repos\books\c_sharp_yellow_book\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
 C:\Users\v-pardav\repos\books\c_sharp_yellow_book\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\v-pardav\repos\books\c_sharp_yellow_book\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\v-pardav\repos\c_sharp_yellow_book\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\v-pardav\repos\c_sharp_yellow_book\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\v-pardav\repos\c_sharp_yellow_book\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\v-pardav\repos\c_sharp_yellow_book\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\v-pardav\repos\c_sharp_yellow_book\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\v-pardav\repos\c_sharp_yellow_book\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
