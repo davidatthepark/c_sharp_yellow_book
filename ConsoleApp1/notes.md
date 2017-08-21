@@ -146,3 +146,99 @@ Forgetting to close a stream is bad for a number of reasons:
 - It is possible that the program may finish without the file being properly closed. Some of the data that you wrote into the file will not be there.
 - Other program may not be able to use that file. It will also be impossible to move or rename the file.
 - An open stream consumes a small, but significant, part of operating resource.
+
+### Creating Solutions
+
+- The scope of a system is a description of the things that the system is going to do and what the system is **not** going to do.
+
+##### Enumeration and States
+
+- Enumerated types are just lists of states. Every time that you have to hold something which can take a limited number of possible values or states, you should think of using enumerated types to hold the values.
+
+```
+enum SeaState 
+{
+	EmptySea,
+	Attacked,
+	Battleship,
+};
+```
+
+##### Structures
+
+- A collection of variables which you can treat as a single entity.
+
+```
+struct Account
+{
+    public AccountState State;
+    public string Name;
+    public string Address;
+    public int AccountNumber;
+    public int Balance;
+    public int Overdraft;
+};
+
+Account RobsAccount;
+RobsAccount.State = AccountState.Active;
+RobsAccount.Balance = 1000000;
+```
+
+##### Objects and Structures
+
+- Structures and objects are similar in that they both hold data and contain methods. However, the main difference is that structures are managed in terms of value whereas objects are managed in terms of reference.
+
+- Reread 4.4.3 "Why Bother with References" 
+
+##### Member Protection Inside Objects (Public vs Private)
+
+- Consider the protected field called balance:
+
+```
+class Account
+{
+    private decimal balance;
+}
+```
+
+- We can only change the balance through code in the class itself.
+
+- Data members should usually be private and method members should be public.
+
+##### Static Class Members
+
+- A static member is a member of the class, not a member of an instance of the class.
+
+Static data member
+```
+public class Account 
+{
+    public decimal Balance;
+    public static decimal InterestRateCharged;
+}
+```
+
+- Since the interest rate is the same for all accounts, we made it static. We should be careful though. A change to a static value will affect your entire system so they should always be made private and updated by means of method calls.
+
+- Static methods are useful when creating libraries.
+
+###### Overloading Constructors
+
+```
+public Account(string inName, string inAddress, decimal inBalance)
+{
+    name = inName;
+    address = inAddress;
+    balance = inBalance;
+}
+
+public Account (string inName, string inAddress) :
+    this (inName, inAddress, 0)
+{
+}
+
+public Account (string inName) :
+    this (inName, "Not Supplied", 0)
+{
+}
+```
