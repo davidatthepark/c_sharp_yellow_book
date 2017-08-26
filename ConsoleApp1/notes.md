@@ -242,3 +242,37 @@ public Account (string inName) :
 {
 }
 ```
+
+##### 4.8.2 Components and Interfaces
+- An interface specifies how a software component could be used by another software component. 
+
+public class CustomerAccount : IAccount {
+    ...
+}
+
+- IAccount is how the class implements the IAccount interface. This means that the class contains concrete versions of all the methods described in the interface. If the class does not contain a method that the interface needs you will get a compilation error.
+
+- With interfaces, we move away from considering classes in terms of what they are, and start to think about them in terms of what they can do.
+
+- A C# component is a class that implements an interface. 
+
+##### 4.8.7 Designing with Interfaces
+
+- The steps to creating a system are:
+
+1) Gather as much metadata as you can about the problem; what is important to the customer, what values need to be represented and manipulated and the range of those values.
+2) Identify classes that you will have to create to represent the components in the problem.
+3) Identify the methods and properties that the components must provide.
+4) Put these into interfaces for each of the components.
+5) Decide how these values and actions are to be tested.
+
+##### 4.9.2 Overriding Methods
+- If you want the ability to override a method from the class you inherited from, add `virtual` to the base method and add `override` to the new class. 
+
+- If you need to make private members visible to classes which extend the parent, you can use `protected`. 
+
+- A better way to do this is to use the parent class's method through the keyword `base`. We can access the method like so `base.WithdrawFunds(amount)`
+
+- Interface: lets you identify a set of behaviours (i.e. methods) which a component can be made to implement. Any component which implements the interface can be thought of in terms of a reference of that interface type. A concrete example of this would be something like IPrintHardCopy. Lots of items in my bank system will need to do this and so we could put the behaviour details into the interface for them to implement in their own way. Then our printer can just regard each of the instances that implement this interface purely in this way. Interfaces let me describe a set of behaviours which a component can implement. Once a component can implement an interface it can be regarded purely in terms of a component with this ability. Objects can implement more than one interface, allowing them to present different faces to the systems that use them.
+
+- Abstract: lets you create a parent class which holds template information for all the classes which extend it. If you want to create a related set of items, for example all the different kinds of bank account you might need to deal with, including credit card, deposit account, current account etc. then the best way to do this is to set up a parent class which contains abstract and non-abstract methods. The child classes can make use of the methods from the parent and override the ones that need to be provided differently for that particular class.
