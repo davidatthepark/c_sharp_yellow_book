@@ -276,3 +276,59 @@ public class CustomerAccount : IAccount {
 - Interface: lets you identify a set of behaviours (i.e. methods) which a component can be made to implement. Any component which implements the interface can be thought of in terms of a reference of that interface type. A concrete example of this would be something like IPrintHardCopy. Lots of items in my bank system will need to do this and so we could put the behaviour details into the interface for them to implement in their own way. Then our printer can just regard each of the instances that implement this interface purely in this way. Interfaces let me describe a set of behaviours which a component can implement. Once a component can implement an interface it can be regarded purely in terms of a component with this ability. Objects can implement more than one interface, allowing them to present different faces to the systems that use them.
 
 - Abstract: lets you create a parent class which holds template information for all the classes which extend it. If you want to create a related set of items, for example all the different kinds of bank account you might need to deal with, including credit card, deposit account, current account etc. then the best way to do this is to set up a parent class which contains abstract and non-abstract methods. The child classes can make use of the methods from the parent and override the ones that need to be provided differently for that particular class.
+
+###### 4.10 Object Etiquette
+- Creating a new class actually inherits from the C# object class.
+
+`public class Account` 
+
+is equal to 
+
+`public class Account : object`
+
+##### 4.10.3 Objects and `this`
+- `this` is a referenace to the current instance.
+
+```
+public class Counter 
+{
+    public int Data = 0l
+    public void Count()
+    {
+        this.Data = this.Data + 1;
+    }
+}
+```
+
+- The compiler allows you to omit the `this` keyword in classes. You can add them if you want to be explicit that we are using a member of a class rather than a local variable.
+
+##### 4.11 Strings and chars
+- Strings are objects but they don't always behave like objects.
+
+- Example:
+
+```
+string s1 = "Rob";
+string s2 = s1;
+s2 = "different";
+
+// s1 === "Rob"
+```
+
+- In the above example, `s1` is still `"Rob"` because strings are immutable. This is because programmers want strings to behave like values in this respect.
+
+- If you try to change a string, the C# system created a new string and changes the reference. This is to save memory. All the same strings can just refer to the same instance. 
+
+##### 4.12.1 Properties as class members
+```
+public class Staffmember 
+{
+    public int Age;
+}
+```
+
+- The above example is bad because we can directly set this public property. A better way to implement this would be to create a private variable and use public methods to get and set. 
+
+##### 4.12.6 Using Delegates
+- A delegate is a type safe reference to a method in a class.
+- 
