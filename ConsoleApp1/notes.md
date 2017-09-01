@@ -334,3 +334,20 @@ public class Staffmember
 
 ##### Arrays and Hash Tables
 - For fast lookups, use hash tables because we do not have to look through all the elements. 
+
+---
+
+### 5 Advanced Programming
+
+##### Generics and Collections
+- Generic classes and methods combine reusability, type safety, and efficiency in a way that their non-generic counterparts cannot.
+
+##### 5.1.1 The ArrayList Class
+- The ArrayList class is an example of a generic class. It allows you to create arrays that can grow in size.
+
+##### 5.1.2 The List Class
+- The List class is similar to the ArrayList class but it is also typesafe.
+
+`List<Account> accountList = newList<Account>();`
+
+#### 5.1.3 The Dictionary Class
