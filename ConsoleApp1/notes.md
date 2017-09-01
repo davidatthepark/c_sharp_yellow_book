@@ -331,4 +331,6 @@ public class Staffmember
 
 ##### 4.12.6 Using Delegates
 - A delegate is a type safe reference to a method in a class.
-- 
+
+##### Arrays and Hash Tables
+- For fast lookups, use hash tables because we do not have to look through all the elements. 

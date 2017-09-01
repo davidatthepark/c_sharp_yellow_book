@@ -1,11 +1,8 @@
-﻿namespace ConsoleApp1
+﻿namespace BankProgram
 {
-    partial class bank
+    interface IBank
     {
-        interface IBank
-        {
-            IAccount FindAccount(string name);
-            bool StoreAccount(IAccount account);
-        }
+        IAccount FindAccount(string name);
+        bool StoreAccount(IAccount account);
     }
 }
