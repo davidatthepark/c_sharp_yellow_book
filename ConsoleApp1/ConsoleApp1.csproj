@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="ArrayBank.cs" />
+    <Compile Include="HashBank.cs" />
     <Compile Include="IAccount.cs" />
     <Compile Include="IBank.cs" />
     <Compile Include="Program.cs" />
