@@ -351,3 +351,10 @@ public class Staffmember
 `List<Account> accountList = newList<Account>();`
 
 #### 5.1.3 The Dictionary Class
+- Just as ArrayList has a more powerful, generically enchanced, cousin called List, so the HashTable has a more powerful cousin called Diciontary. This allows the key to your hashtable, and the items it stores, to be made typesafe.
+
+```
+Dictionary<string, Account> accountDictionary = new Dictionary<string, Account>();
+```
+
+- The difference between this and a hash table is that we can only add `Account` values which are located by means of a string. 
