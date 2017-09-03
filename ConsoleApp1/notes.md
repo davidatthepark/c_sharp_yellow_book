@@ -358,3 +358,14 @@ Dictionary<string, Account> accountDictionary = new Dictionary<string, Account>(
 ```
 
 - The difference between this and a hash table is that we can only add `Account` values which are located by means of a string. 
+
+##### 5.4 Threads and Threading
+- Computers can run more than one thread in a single block of program code. Threads make it possible for your computer to do something useful while one program is held up. A computer can support multiple threads in two ways:
+
+1) Rapidly switching between active threads. 
+2) Have more than one processor (dual core, quad core).
+
+##### 5.6 Program Organisation
+- dll (dynamic link library): The content in a dll will be loaded dynamically as the program runs.
+
+#### 5.7 A Graphical User Interface

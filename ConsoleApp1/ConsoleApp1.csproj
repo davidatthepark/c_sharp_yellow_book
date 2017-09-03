@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="ArrayBank.cs" />
+    <Compile Include="CustomerAccount.cs" />
+    <Compile Include="DictionaryBank.cs" />
     <Compile Include="HashBank.cs" />
     <Compile Include="IAccount.cs" />
     <Compile Include="IBank.cs" />
